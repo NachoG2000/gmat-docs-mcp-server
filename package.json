@@ -1,0 +1,36 @@
+{
+  "name": "gmat-docs-mcp-server",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node -r dotenv/config dist/index.js dotenv_config_path=.env.local",
+    "dev": "nodemon --watch src --exec node --loader ts-node/esm src/index.ts",
+    "setup": "node dist/setup.js",
+    "setup:test": "NODE_ENV=test node dist/setup.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.10.0",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "axios": "^1.11.0",
+    "cheerio": "^1.1.2",
+    "dotenv": "^17.2.2",
+    "ml-distance": "^4.0.1",
+    "openai": "^5.19.1",
+    "turndown": "^7.2.1",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "@types/turndown": "^5.0.5",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
